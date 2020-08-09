@@ -5,7 +5,10 @@ import 'react-toastify/dist/ReactToastify.css'
 import {myFirestore, myStorage} from '../../Config/MyFirebase'
 import images from '../Themes/Images'
 import './ChatBoard.css'
-import {AppString} from './../Const'
+import {AppString} from '../Const'
+import { Link } from 'react-router-dom'
+import Button from "react-bootstrap/Button";
+
 
 export default class ChatBoard extends Component {
     constructor(props) {
@@ -250,6 +253,9 @@ export default class ChatBoard extends Component {
                         alt="icon send"
                         onClick={() => this.onSendMessage(this.state.inputValue, 0)}
                     />
+                    <Link to="/">
+                        <Button>Salir de Chat</Button>
+                    </Link>
                 </div>
 
                 {/* Loading */}

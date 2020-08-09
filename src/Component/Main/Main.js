@@ -8,6 +8,7 @@ import './Main.css'
 import ChatBoard from './../ChatBoard/ChatBoard'
 import {AppString} from './../Const'
 
+
 class Main extends Component {
     constructor(props) {
         super(props)
@@ -137,6 +138,7 @@ class Main extends Component {
                         src={images.ic_logout}
                         onClick={this.onLogoutClick}
                     />
+                    
                 </div>
 
                 {/* Body */}

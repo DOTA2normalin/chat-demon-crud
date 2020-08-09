@@ -5,6 +5,8 @@ import Login from '../Login/Login'
 import Main from '../Main/Main'
 import Profile from '../Profile/Profile'
 import {toast, ToastContainer} from 'react-toastify'
+import Links from '../Crud/Links'
+import About from '../About/About'
 
 class Root extends Component {
     showToast = (type, message) => {
@@ -48,6 +50,8 @@ class Root extends Component {
                                 <Profile showToast={this.showToast} {...props} />
                             )}
                         />
+                        <Route path="/main/crud" component={Links}></Route>
+                        <Route path="/about" component={About}></Route>
                     </Switch>
                 </div>
             </BrowserRouter>

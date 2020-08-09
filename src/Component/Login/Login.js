@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import {myFirebase, myFirestore} from '../../Config/MyFirebase'
 import './Login.css'
 import {AppString} from './../Const'
+import { Link } from "react-router-dom";
 
 class Login extends Component {
     constructor(props) {
@@ -98,11 +99,13 @@ class Login extends Component {
 
     render() {
         return (
+            <>
             <div className="viewRoot">
-                <div className="header">CHAT DEMO</div>
+                <div className="header">CONTROL AGENDA AND CHAT DEMO</div>
                 <button className="btnLogin" type="submit" onClick={this.onLoginPress}>
                     SIGN IN WITH GOOGLE
                 </button>
+                
 
                 {this.state.isLoading ? (
                     <div className="viewLoading">
@@ -112,9 +115,16 @@ class Login extends Component {
                             height={'3%'}
                             width={'3%'}
                         />
+
                     </div>
                 ) : null}
+
+                
             </div>
+            <Link to="/about" className="text-justify">
+                    <p className="text-center mt-5">About</p>
+            </Link>
+            </>
         )
     }
 }

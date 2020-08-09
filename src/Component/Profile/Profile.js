@@ -6,6 +6,8 @@ import {myFirestore, myStorage} from '../../Config/MyFirebase'
 import images from './../Themes/Images'
 import './Profile.css'
 import {AppString} from './../Const'
+import { Link } from "react-router-dom";
+
 
 class Profile extends Component {
     constructor(props) {
@@ -149,9 +151,12 @@ class Profile extends Component {
                     onChange={this.onChangeAboutMe}
                 />
 
-                <button className="btnUpdate" onClick={this.uploadAvatar}>
-                    UPDATE
-                </button>
+                <Link to="/main">
+                    <button className="btnUpdate" onClick={this.uploadAvatar}>
+                        UPDATE
+                    </button>
+                </Link>
+                
 
                 {this.state.isLoading ? (
                     <div className="viewLoading">
